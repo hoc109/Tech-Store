@@ -5,7 +5,7 @@
       "title": "MacBook Pro 14 M3",
       "category": "laptop",
       "price": 41574000,
-      "image": "https://placehold.co/400x300?text=MacBook+Pro+14",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&h=300&fit=crop",
       "specs": {
         "cpu": "Apple M3 8-core",
         "gpu": "10-core GPU",
@@ -21,7 +21,7 @@
       "title": "Dell XPS 15 9530",
       "category": "laptop",
       "price": 49374000,
-      "image": "https://placehold.co/400x300?text=Dell+XPS+15",
+      "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=400&h=300&fit=crop",
       "specs": {
         "cpu": "Core i7-13700H",
         "gpu": "RTX 4060",
@@ -37,7 +37,7 @@
       "title": "ASUS ROG Strix G16",
       "category": "laptop",
       "price": 36374000,
-      "image": "https://placehold.co/400x300?text=ROG+Strix+G16",
+      "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400&h=300&fit=crop",
       "specs": {
         "cpu": "Core i7-13650HX",
         "gpu": "RTX 4060",
@@ -53,7 +53,7 @@
       "title": "Lenovo ThinkPad X1 Carbon",
       "category": "laptop",
       "price": 37700000,
-      "image": "https://placehold.co/400x300?text=ThinkPad+X1",
+      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400&h=300&fit=crop",
       "specs": {
         "cpu": "Core i7-1355U",
         "gpu": "Iris Xe",
@@ -69,7 +69,7 @@
       "title": "Acer Nitro 5 2023",
       "category": "laptop",
       "price": 23374000,
-      "image": "https://placehold.co/400x300?text=Acer+Nitro+5",
+      "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400&h=300&fit=crop",
       "specs": {
         "cpu": "Core i5-13420H",
         "gpu": "RTX 4050",
@@ -418,5 +418,30 @@
     }
   ],
   "carts": [],
-  "orders": []
+  "orders": [
+    {
+      "customerName": "Đỗ Quốc Học",
+      "phone": "0982720474",
+      "address": "hà nội",
+      "items": [
+        {
+          "productId": 3,
+          "title": "ASUS ROG Strix G16",
+          "price": 36374000,
+          "quantity": 1,
+          "id": 1
+        },
+        {
+          "productId": 1,
+          "title": "MacBook Pro 14 M3",
+          "price": 41574000,
+          "quantity": 1,
+          "id": 2
+        }
+      ],
+      "totalPrice": 77948000,
+      "date": "5/28/2026, 9:53:21 PM",
+      "id": 1
+    }
+  ]
 }

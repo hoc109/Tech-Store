@@ -11,7 +11,7 @@ function Cart() {
 
     const fetchCart = async () => {
         try {
-            const res = await axios.get('http://localhost:3000/carts');
+            const res = await axios.get('http://localhost:9999/carts');
             setCartItems(res.data);
         } catch (error) { console.error('Error fetching cart:', error); }
     };
@@ -20,7 +20,7 @@ function Cart() {
         const qty = Number(newQty);
         if (qty < 1) return;
         try {
-            await axios.patch(`http://localhost:3000/carts/${item.id}`, { quantity: qty });
+            await axios.patch(`http://localhost:9999/carts/${item.id}`, { quantity: qty });
             setCartItems(prev => prev.map(ci => ci.id === item.id ? { ...ci, quantity: qty } : ci));
             fetchCartCount();
         } catch (error) { console.error('Error updating quantity:', error); }
@@ -28,7 +28,7 @@ function Cart() {
 
     const handleDelete = async (itemId) => {
         try {
-            await axios.delete(`http://localhost:3000/carts/${itemId}`);
+            await axios.delete(`http://localhost:9999/carts/${itemId}`);
             setCartItems(prev => prev.filter(ci => ci.id !== itemId));
             fetchCartCount();
         } catch (error) { console.error('Error deleting cart item:', error); }

@@ -49,6 +49,16 @@ function Menu() {
                             ADMIN
                         </NavLink>
                     </li>
+                    <li className="nav-item">
+                        <NavLink
+                            className={({ isActive }) =>
+                                'nav-link' + (isActive ? ' text-warning' : '')
+                            }
+                            to="/orders"
+                        >
+                            ORDERS
+                        </NavLink>
+                    </li>
                 </ul>
                 <Link to="/cart" className="btn btn-outline-light position-relative">
                     🛒

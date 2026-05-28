@@ -7,6 +7,7 @@ import Detail from './components/Detail';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import Admin from './components/Admin';
+import OrderHistory from './components/OrderHistory';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                         <Route path="/cart" element={<Cart />} />
                         <Route path="/checkout" element={<Checkout />} />
                         <Route path="/admin" element={<Admin />} />
+                        <Route path="/orders" element={<OrderHistory />} />
                     </Routes>
                 </div>
             </BrowserRouter>

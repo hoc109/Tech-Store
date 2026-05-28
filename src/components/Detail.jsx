@@ -18,7 +18,7 @@ function Detail() {
 
     const fetchProduct = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/products/${id}`);
+            const res = await axios.get(`http://localhost:9999/products/${id}`);
             setProduct(res.data);
         } catch (error) {
             console.error('Error fetching product detail:', error);
@@ -27,7 +27,7 @@ function Detail() {
 
     const handleAddToCart = async () => {
         try {
-            await axios.post('http://localhost:3000/carts', {
+            await axios.post('http://localhost:9999/carts', {
                 productId: product.id,
                 title: product.title,
                 price: product.price,
@@ -54,7 +54,7 @@ function Detail() {
                 date: new Date().toLocaleDateString()
             };
             const updatedReviews = [...(product.reviews || []), newReview];
-            await axios.patch(`http://localhost:3000/products/${id}`, {
+            await axios.patch(`http://localhost:9999/products/${id}`, {
                 reviews: updatedReviews
             });
             setProduct({ ...product, reviews: updatedReviews });
@@ -77,17 +77,19 @@ function Detail() {
             <div className="card mb-4 shadow">
                 <div className="card-body">
                     <div className="row">
-                        {/* Cột trái: Hình ảnh */}
-                        <div className="col-md-5">
-                            <img
-                                src={product.image}
-                                className="img-fluid rounded"
-                                alt={product.title}
-                            />
-                        </div>
+                        {/* Cột trái: Hình ảnh (chỉ hiển thị cho Laptop) */}
+                        {product.category === 'laptop' && (
+                            <div className="col-md-5">
+                                <img
+                                    src={product.image}
+                                    className="img-fluid rounded"
+                                    alt={product.title}
+                                />
+                            </div>
+                        )}
 
                         {/* Cột phải: Thông tin sản phẩm */}
-                        <div className="col-md-7">
+                        <div className={product.category === 'laptop' ? 'col-md-7' : 'col-md-12'}>
                             <h2>{product.title}</h2>
                             <p>
                                 <strong>Danh mục:</strong>{' '}

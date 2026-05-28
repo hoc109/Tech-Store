@@ -15,7 +15,7 @@ function Admin() {
 
     const fetchProducts = async () => {
         try {
-            const res = await axios.get('http://localhost:3000/products');
+            const res = await axios.get('http://localhost:9999/products');
             setProducts(res.data);
         } catch (error) { console.error('Error fetching products:', error); }
     };
@@ -39,7 +39,7 @@ function Admin() {
     const handleDelete = async (id) => {
         if (!window.confirm('Bạn có chắc muốn xóa sản phẩm này?')) return;
         try {
-            await axios.delete(`http://localhost:3000/products/${id}`);
+            await axios.delete(`http://localhost:9999/products/${id}`);
             fetchProducts();
         } catch (error) { console.error('Error deleting product:', error); }
     };
@@ -49,10 +49,10 @@ function Admin() {
         if (!title.trim() || !price) { alert('Vui lòng nhập đầy đủ thông tin!'); return; }
         try {
             if (editId) {
-                await axios.patch(`http://localhost:3000/products/${editId}`, { title, category, price: Number(price) });
+                await axios.patch(`http://localhost:9999/products/${editId}`, { title, category, price: Number(price) });
                 alert('Cập nhật sản phẩm thành công!');
             } else {
-                await axios.post('http://localhost:3000/products', { title, category, price: Number(price), reviews: [] });
+                await axios.post('http://localhost:9999/products', { title, category, price: Number(price), reviews: [] });
                 alert('Thêm sản phẩm thành công!');
             }
             resetForm();

@@ -12,7 +12,7 @@ export function CartProvider({ children }) {
 
     const fetchCartCount = useCallback(async () => {
         try {
-            const res = await axios.get('http://localhost:3000/carts');
+            const res = await axios.get('http://localhost:9999/carts');
             const total = res.data.reduce((sum, item) => sum + item.quantity, 0);
             setCartCount(total);
         } catch (error) {

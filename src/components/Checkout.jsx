@@ -15,7 +15,7 @@ function Checkout() {
 
     const fetchCart = async () => {
         try {
-            const res = await axios.get('http://localhost:3000/carts');
+            const res = await axios.get('http://localhost:9999/carts');
             setCartItems(res.data);
         } catch (error) { console.error('Error fetching cart:', error); }
     };
@@ -37,9 +37,9 @@ function Checkout() {
                 totalPrice: totalPrice,
                 date: new Date().toLocaleString()
             };
-            await axios.post('http://localhost:3000/orders', order);
+            await axios.post('http://localhost:9999/orders', order);
             for (const item of cartItems) {
-                await axios.delete(`http://localhost:3000/carts/${item.id}`);
+                await axios.delete(`http://localhost:9999/carts/${item.id}`);
             }
             fetchCartCount();
             alert('🎉 Đặt hàng thành công!');

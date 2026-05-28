@@ -16,7 +16,7 @@ function ProductList() {
 
     const fetchProducts = async () => {
         try {
-            const res = await axios.get('http://localhost:3000/products');
+            const res = await axios.get('http://localhost:9999/products');
             setAllProducts(res.data);
             setProducts(res.data);
         } catch (error) {
@@ -46,7 +46,7 @@ function ProductList() {
 
     const handleAddToCart = async (product) => {
         try {
-            await axios.post('http://localhost:3000/carts', {
+            await axios.post('http://localhost:9999/carts', {
                 productId: product.id,
                 title: product.title,
                 price: product.price,
@@ -61,7 +61,7 @@ function ProductList() {
 
     return (
         <div>
-            <h4 className="mb-3">📦 Tech Products</h4>
+            <h4 className="mb-3 text-center"> List of Products </h4>
 
             {/* Toolbar: Search + Sort */}
             <div className="row mb-4">
@@ -81,8 +81,8 @@ function ProductList() {
                         onChange={(e) => setSortOrder(e.target.value)}
                     >
                         <option value="">-- Sort By Price --</option>
-                        <option value="asc">Thấp đến Cao ↑</option>
-                        <option value="desc">Cao đến Thấp ↓</option>
+                        <option value="asc">Low to High ↑</option>
+                        <option value="desc">High to Low ↓</option>
                     </select>
                 </div>
             </div>
@@ -100,11 +100,6 @@ function ProductList() {
                                 <h6 className="card-title">{product.title}</h6>
                                 <p className="card-text text-danger fw-bold">
                                     {product.price.toLocaleString()}đ
-                                </p>
-                                <p className="card-text">
-                                    <small className="text-muted text-uppercase">
-                                        {product.category}
-                                    </small>
                                 </p>
                                 <div className="mt-auto d-flex gap-2">
                                     <Link

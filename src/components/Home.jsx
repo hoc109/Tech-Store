@@ -4,15 +4,15 @@ import axios from 'axios';
 import { useCart } from './CartProvider';
 
 const CATEGORIES = [
-    { key: 'ALL',       label: 'ALL',       icon: '📋' },
-    { key: 'LAPTOP',    label: 'LAPTOP',    icon: '💻' },
-    { key: 'MOUSE',     label: 'MOUSE',     icon: '🖱️' },
-    { key: 'KEYBOARD',  label: 'KEYBOARD',  icon: '⌨️' },
-    { key: 'MONITOR',   label: 'MONITOR',   icon: '🖥️' },
-    { key: 'RAM',       label: 'RAM',       icon: '🧩' },
-    { key: 'VGA',       label: 'VGA',       icon: '🎮' },
+    { key: 'ALL', label: 'ALL', icon: '📋' },
+    { key: 'LAPTOP', label: 'LAPTOP', icon: '💻' },
+    { key: 'MOUSE', label: 'MOUSE', icon: '🖱️' },
+    { key: 'KEYBOARD', label: 'KEYBOARD', icon: '⌨️' },
+    { key: 'MONITOR', label: 'MONITOR', icon: '🖥️' },
+    { key: 'RAM', label: 'RAM', icon: '🧩' },
+    { key: 'VGA', label: 'VGA', icon: '🎮' },
     { key: 'MAINBOARD', label: 'MAINBOARD', icon: '🧮' },
-    { key: 'CPU',       label: 'CPU',       icon: '⚡' },
+    { key: 'CPU', label: 'CPU', icon: '⚡' },
 ];
 
 function Home() {
@@ -26,7 +26,7 @@ function Home() {
 
     const fetchProducts = async (category) => {
         try {
-            let url = 'http://localhost:3000/products';
+            let url = 'http://localhost:9999/products';
             if (category !== 'ALL') {
                 url += `?category=${category.toLowerCase()}`;
             }
@@ -44,7 +44,7 @@ function Home() {
 
     const handleAddToCart = async (product) => {
         try {
-            await axios.post('http://localhost:3000/carts', {
+            await axios.post('http://localhost:9999/carts', {
                 productId: product.id,
                 title: product.title,
                 price: product.price,
@@ -92,11 +92,6 @@ function Home() {
                                     <h6 className="card-title">{product.title}</h6>
                                     <p className="card-text text-danger fw-bold">
                                         {product.price.toLocaleString()}đ
-                                    </p>
-                                    <p className="card-text">
-                                        <small className="text-muted text-uppercase">
-                                            {product.category}
-                                        </small>
                                     </p>
                                     <div className="mt-auto d-flex gap-2">
                                         <Link
