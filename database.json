@@ -1,0 +1,422 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "MacBook Pro 14 M3",
+      "category": "laptop",
+      "price": 41574000,
+      "image": "https://placehold.co/400x300?text=MacBook+Pro+14",
+      "specs": {
+        "cpu": "Apple M3 8-core",
+        "gpu": "10-core GPU",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "weight": "1.55",
+        "screen": "14.2\" Liquid Retina XDR"
+      },
+      "reviews": []
+    },
+    {
+      "id": 2,
+      "title": "Dell XPS 15 9530",
+      "category": "laptop",
+      "price": 49374000,
+      "image": "https://placehold.co/400x300?text=Dell+XPS+15",
+      "specs": {
+        "cpu": "Core i7-13700H",
+        "gpu": "RTX 4060",
+        "ram": "16GB DDR5",
+        "storage": "1TB SSD",
+        "weight": "1.92",
+        "screen": "15.6\" 3.5K OLED"
+      },
+      "reviews": []
+    },
+    {
+      "id": 3,
+      "title": "ASUS ROG Strix G16",
+      "category": "laptop",
+      "price": 36374000,
+      "image": "https://placehold.co/400x300?text=ROG+Strix+G16",
+      "specs": {
+        "cpu": "Core i7-13650HX",
+        "gpu": "RTX 4060",
+        "ram": "16GB DDR5",
+        "storage": "512GB SSD",
+        "weight": "2.50",
+        "screen": "16.0\" WUXGA 165Hz"
+      },
+      "reviews": []
+    },
+    {
+      "id": 4,
+      "title": "Lenovo ThinkPad X1 Carbon",
+      "category": "laptop",
+      "price": 37700000,
+      "image": "https://placehold.co/400x300?text=ThinkPad+X1",
+      "specs": {
+        "cpu": "Core i7-1355U",
+        "gpu": "Iris Xe",
+        "ram": "16GB LPDDR5",
+        "storage": "512GB SSD",
+        "weight": "1.12",
+        "screen": "14.0\" WUXGA IPS"
+      },
+      "reviews": []
+    },
+    {
+      "id": 5,
+      "title": "Acer Nitro 5 2023",
+      "category": "laptop",
+      "price": 23374000,
+      "image": "https://placehold.co/400x300?text=Acer+Nitro+5",
+      "specs": {
+        "cpu": "Core i5-13420H",
+        "gpu": "RTX 4050",
+        "ram": "16GB DDR5",
+        "storage": "512GB SSD",
+        "weight": "2.10",
+        "screen": "15.6\" FHD 144Hz"
+      },
+      "reviews": []
+    },
+    {
+      "id": 6,
+      "title": "Logitech G Pro X Superlight",
+      "category": "mouse",
+      "price": 3354000,
+      "image": "https://placehold.co/400x300?text=Logitech+G+Pro",
+      "reviews": []
+    },
+    {
+      "id": 7,
+      "title": "Razer DeathAdder V3 Pro",
+      "category": "mouse",
+      "price": 3874000,
+      "image": "https://placehold.co/400x300?text=Razer+DeathAdder",
+      "reviews": []
+    },
+    {
+      "id": 8,
+      "title": "Zowie EC2-CW Wireless",
+      "category": "mouse",
+      "price": 3094000,
+      "image": "https://placehold.co/400x300?text=Zowie+EC2",
+      "reviews": []
+    },
+    {
+      "id": 9,
+      "title": "SteelSeries Aerox 3",
+      "category": "mouse",
+      "price": 1534000,
+      "image": "https://placehold.co/400x300?text=SteelSeries+Aerox",
+      "reviews": []
+    },
+    {
+      "id": 10,
+      "title": "Corsair Harpoon RGB",
+      "category": "mouse",
+      "price": 1274000,
+      "image": "https://placehold.co/400x300?text=Corsair+Harpoon",
+      "reviews": []
+    },
+    {
+      "id": 11,
+      "title": "Keychron Q1 Pro",
+      "category": "keyboard",
+      "price": 5174000,
+      "image": "https://placehold.co/400x300?text=Keychron+Q1",
+      "reviews": []
+    },
+    {
+      "id": 12,
+      "title": "Akko 3098B Plus",
+      "category": "keyboard",
+      "price": 2314000,
+      "image": "https://placehold.co/400x300?text=Akko+3098B",
+      "reviews": []
+    },
+    {
+      "id": 13,
+      "title": "Corsair K70 RGB PRO",
+      "category": "keyboard",
+      "price": 4134000,
+      "image": "https://placehold.co/400x300?text=Corsair+K70",
+      "reviews": []
+    },
+    {
+      "id": 14,
+      "title": "Razer Huntsman V2",
+      "category": "keyboard",
+      "price": 4914000,
+      "image": "https://placehold.co/400x300?text=Razer+Huntsman",
+      "reviews": []
+    },
+    {
+      "id": 15,
+      "title": "Logitech MX Mechanical",
+      "category": "keyboard",
+      "price": 4394000,
+      "image": "https://placehold.co/400x300?text=Logitech+MX",
+      "reviews": []
+    },
+    {
+      "id": 16,
+      "title": "LG UltraGear 27GR95QE-B 240Hz OLED",
+      "category": "monitor",
+      "price": 23374000,
+      "image": "https://placehold.co/400x300?text=LG+UltraGear",
+      "specs": {
+        "resolution": "2560x1440 (2K)",
+        "refresh_rate": "240Hz",
+        "panel": "OLED",
+        "response_time": "0.03ms",
+        "screen": "27 inch",
+        "weight": "7.3"
+      },
+      "reviews": []
+    },
+    {
+      "id": 17,
+      "title": "Samsung Odyssey G7 27 inch",
+      "category": "monitor",
+      "price": 14274000,
+      "image": "https://placehold.co/400x300?text=Samsung+Odyssey",
+      "specs": {
+        "resolution": "2560x1440 (2K)",
+        "refresh_rate": "240Hz",
+        "panel": "VA Curved",
+        "response_time": "1ms",
+        "screen": "27 inch",
+        "weight": "7.2"
+      },
+      "reviews": []
+    },
+    {
+      "id": 18,
+      "title": "DELL UltraSharp U2723QE",
+      "category": "monitor",
+      "price": 16354000,
+      "image": "https://placehold.co/400x300?text=DELL+UltraSharp",
+      "specs": {
+        "resolution": "3840x2160 (4K)",
+        "refresh_rate": "60Hz",
+        "panel": "IPS Black",
+        "response_time": "5ms",
+        "screen": "27 inch",
+        "weight": "6.6"
+      },
+      "reviews": []
+    },
+    {
+      "id": 19,
+      "title": "ASUS TUF Gaming VG27AQ",
+      "category": "monitor",
+      "price": 7774000,
+      "image": "https://placehold.co/400x300?text=ASUS+TUF",
+      "specs": {
+        "resolution": "2560x1440 (2K)",
+        "refresh_rate": "165Hz",
+        "panel": "IPS",
+        "response_time": "1ms",
+        "screen": "27 inch",
+        "weight": "5.8"
+      },
+      "reviews": []
+    },
+    {
+      "id": 20,
+      "title": "AOC 24G2SP 24 inch 165Hz",
+      "category": "monitor",
+      "price": 4134000,
+      "image": "https://placehold.co/400x300?text=AOC+24G2SP",
+      "specs": {
+        "resolution": "1920x1080 (FHD)",
+        "refresh_rate": "165Hz",
+        "panel": "IPS",
+        "response_time": "1ms",
+        "screen": "24 inch",
+        "weight": "4.2"
+      },
+      "reviews": []
+    },
+    {
+      "id": 21,
+      "title": "Corsair Vengeance RGB 32GB (2x16GB) DDR5",
+      "category": "ram",
+      "price": 3094000,
+      "image": "https://placehold.co/400x300?text=Corsair+RAM",
+      "reviews": []
+    },
+    {
+      "id": 22,
+      "title": "G.Skill Trident Z5 RGB 64GB DDR5",
+      "category": "ram",
+      "price": 6474000,
+      "image": "https://placehold.co/400x300?text=G.Skill+Trident",
+      "reviews": []
+    },
+    {
+      "id": 23,
+      "title": "Kingston FURY Beast 16GB DDR4",
+      "category": "ram",
+      "price": 1170000,
+      "image": "https://placehold.co/400x300?text=Kingston+FURY",
+      "reviews": []
+    },
+    {
+      "id": 24,
+      "title": "AORUS Memory 32GB DDR5 5200MHz",
+      "category": "ram",
+      "price": 3614000,
+      "image": "https://placehold.co/400x300?text=AORUS+RAM",
+      "reviews": []
+    },
+    {
+      "id": 25,
+      "title": "Crucial RAM 8GB DDR4",
+      "category": "ram",
+      "price": 520000,
+      "image": "https://placehold.co/400x300?text=Crucial+RAM",
+      "reviews": []
+    },
+    {
+      "id": 26,
+      "title": "NVIDIA GeForce RTX 4090 24GB",
+      "category": "vga",
+      "price": 41574000,
+      "image": "https://placehold.co/400x300?text=RTX+4090",
+      "reviews": []
+    },
+    {
+      "id": 27,
+      "title": "NVIDIA GeForce RTX 4070 Ti",
+      "category": "vga",
+      "price": 20774000,
+      "image": "https://placehold.co/400x300?text=RTX+4070+Ti",
+      "reviews": []
+    },
+    {
+      "id": 28,
+      "title": "AMD Radeon RX 7900 XTX",
+      "category": "vga",
+      "price": 25974000,
+      "image": "https://placehold.co/400x300?text=RX+7900+XTX",
+      "reviews": []
+    },
+    {
+      "id": 29,
+      "title": "NVIDIA GeForce RTX 3060 12GB",
+      "category": "vga",
+      "price": 7514000,
+      "image": "https://placehold.co/400x300?text=RTX+3060",
+      "reviews": []
+    },
+    {
+      "id": 30,
+      "title": "AMD Radeon RX 6700 XT",
+      "category": "vga",
+      "price": 8554000,
+      "image": "https://placehold.co/400x300?text=RX+6700+XT",
+      "reviews": []
+    },
+    {
+      "id": 31,
+      "title": "ASUS ROG Maximus Z790 Hero",
+      "category": "mainboard",
+      "price": 15574000,
+      "image": "https://placehold.co/400x300?text=ASUS+Z790",
+      "reviews": []
+    },
+    {
+      "id": 32,
+      "title": "MSI MAG B760 TOMAHAWK WIFI",
+      "category": "mainboard",
+      "price": 4914000,
+      "image": "https://placehold.co/400x300?text=MSI+B760",
+      "reviews": []
+    },
+    {
+      "id": 33,
+      "title": "GIGABYTE X670E AORUS MASTER",
+      "category": "mainboard",
+      "price": 12714000,
+      "image": "https://placehold.co/400x300?text=GIGABYTE+X670E",
+      "reviews": []
+    },
+    {
+      "id": 34,
+      "title": "ASRock B650M Pro RS",
+      "category": "mainboard",
+      "price": 3614000,
+      "image": "https://placehold.co/400x300?text=ASRock+B650M",
+      "reviews": []
+    },
+    {
+      "id": 35,
+      "title": "NZXT N7 Z790 Matte Black",
+      "category": "mainboard",
+      "price": 7774000,
+      "image": "https://placehold.co/400x300?text=NZXT+Z790",
+      "reviews": []
+    },
+    {
+      "id": 36,
+      "title": "Intel Core i9-14900K",
+      "category": "cpu",
+      "price": 15314000,
+      "image": "https://placehold.co/400x300?text=Core+i9-14900K",
+      "reviews": []
+    },
+    {
+      "id": 37,
+      "title": "Intel Core i7-13700K",
+      "category": "cpu",
+      "price": 9854000,
+      "image": "https://placehold.co/400x300?text=Core+i7-13700K",
+      "reviews": []
+    },
+    {
+      "id": 38,
+      "title": "Intel Core i5-13400F",
+      "category": "cpu",
+      "price": 4810000,
+      "image": "https://placehold.co/400x300?text=Core+i5-13400F",
+      "reviews": []
+    },
+    {
+      "id": 39,
+      "title": "AMD Ryzen 9 7950X3D",
+      "category": "cpu",
+      "price": 16874000,
+      "image": "https://placehold.co/400x300?text=Ryzen+9+7950X3D",
+      "reviews": []
+    },
+    {
+      "id": 40,
+      "title": "AMD Ryzen 5 7600X",
+      "category": "cpu",
+      "price": 5954000,
+      "image": "https://placehold.co/400x300?text=Ryzen+5+7600X",
+      "reviews": []
+    },
+    {
+      "id": 41,
+      "title": "Intel Core i3-12100F",
+      "category": "cpu",
+      "price": 2314000,
+      "image": "https://placehold.co/400x300?text=Core+i3-12100F",
+      "reviews": []
+    },
+    {
+      "id": 42,
+      "title": "AMD Ryzen 7 7800X3D",
+      "category": "cpu",
+      "price": 10374000,
+      "image": "https://placehold.co/400x300?text=Ryzen+7+7800X3D",
+      "reviews": []
+    }
+  ],
+  "carts": [],
+  "orders": []
+}
