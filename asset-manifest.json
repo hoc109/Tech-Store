@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Tech-Store/static/css/main.49faa5e3.css",
+    "main.js": "/Tech-Store/static/js/main.5a7f5cab.js",
+    "index.html": "/Tech-Store/index.html",
+    "main.49faa5e3.css.map": "/Tech-Store/static/css/main.49faa5e3.css.map",
+    "main.5a7f5cab.js.map": "/Tech-Store/static/js/main.5a7f5cab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49faa5e3.css",
+    "static/js/main.5a7f5cab.js"
+  ]
+}
