@@ -69,7 +69,7 @@
       "title": "Acer Nitro 5 2023",
       "category": "laptop",
       "price": 23374000,
-      "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400&h=300&fit=crop",
+      "image": "https://thegioiso365.vn/wp-content/uploads/2025/07/3813_2712_2705_2697_2687_2321_1.jpg?w=400&h=300&fit=crop",
       "specs": {
         "cpu": "Core i5-13420H",
         "gpu": "RTX 4050",
@@ -85,7 +85,7 @@
       "title": "Logitech G Pro X Superlight",
       "category": "mouse",
       "price": 3354000,
-      "image": "https://placehold.co/400x300?text=Logitech+G+Pro",
+      "image": "https://placehold.co/400x300",
       "reviews": []
     },
     {
@@ -418,30 +418,5 @@
     }
   ],
   "carts": [],
-  "orders": [
-    {
-      "customerName": "Đỗ Quốc Học",
-      "phone": "0982720474",
-      "address": "hà nội",
-      "items": [
-        {
-          "productId": 3,
-          "title": "ASUS ROG Strix G16",
-          "price": 36374000,
-          "quantity": 1,
-          "id": 1
-        },
-        {
-          "productId": 1,
-          "title": "MacBook Pro 14 M3",
-          "price": 41574000,
-          "quantity": 1,
-          "id": 2
-        }
-      ],
-      "totalPrice": 77948000,
-      "date": "5/28/2026, 9:53:21 PM",
-      "id": 1
-    }
-  ]
+  "orders": []
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import axios from '../api';
 import { useCart } from './CartProvider';
 
 const CATEGORIES = [
@@ -87,21 +87,30 @@ function Home() {
                     {products.map((product) => (
                         <div key={product.id} className="col-md-3 mb-4">
                             <div className="card h-100 shadow-sm">
-                                <img src={product.image} className="card-img-top" alt={product.title} />
-                                <div className="card-body d-flex flex-column">
+                                {product.image && product.image.trim() !== '' && !product.image.includes('placehold.co') ? (
+                                    <img src={product.image} className="card-img-top" alt={product.title} style={{ height: '200px', objectFit: 'cover' }} />
+                                ) : (
+                                    <div
+                                        className="d-flex align-items-center justify-content-center"
+                                        style={{ height: '200px', backgroundColor: '#e0e0e0' }}
+                                    >
+                                        <i className="bi bi-cart3 display-4 text-secondary"></i>
+                                    </div>
+                                )}
+                                <div className="card-body d-flex flex-column text-center">
                                     <h6 className="card-title">{product.title}</h6>
                                     <p className="card-text text-danger fw-bold">
                                         {product.price.toLocaleString()}đ
                                     </p>
-                                    <div className="mt-auto d-flex gap-2">
+                                    <div className="mt-auto d-flex justify-content-center gap-2">
                                         <Link
                                             to={`/detail/${product.id}`}
-                                            className="btn btn-primary btn-sm flex-fill"
+                                            className="btn btn-primary btn-sm"
                                         >
                                             Xem chi tiết
                                         </Link>
                                         <button
-                                            className="btn btn-success btn-sm flex-fill"
+                                            className="btn btn-success btn-sm"
                                             onClick={() => handleAddToCart(product)}
                                         >
                                             Thêm vào giỏ hàng

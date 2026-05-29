@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import axios from '../api';
 import { useCart } from './CartProvider';
 
 function Detail() {
@@ -167,11 +167,11 @@ function Detail() {
                                 value={reviewRating}
                                 onChange={(e) => setReviewRating(e.target.value)}
                             >
-                                <option value={1}>⭐ 1 sao</option>
-                                <option value={2}>⭐⭐ 2 sao</option>
-                                <option value={3}>⭐⭐⭐ 3 sao</option>
-                                <option value={4}>⭐⭐⭐⭐ 4 sao</option>
-                                <option value={5}>⭐⭐⭐⭐⭐ 5 sao</option>
+                                <option value={1}>⭐</option>
+                                <option value={2}>⭐⭐</option>
+                                <option value={3}>⭐⭐⭐</option>
+                                <option value={4}>⭐⭐⭐⭐</option>
+                                <option value={5}>⭐⭐⭐⭐⭐</option>
                             </select>
                         </div>
                         <button type="submit" className="btn btn-primary">
