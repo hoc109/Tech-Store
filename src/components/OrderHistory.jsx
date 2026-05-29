@@ -48,7 +48,7 @@ function OrderHistory() {
                             <table className="table table-bordered table-hover mb-3">
                                 <thead className="table-secondary">
                                     <tr>
-                                        <th>#</th>
+                                        <th>STT</th>
                                         <th>Tên sản phẩm</th>
                                         <th>Giá</th>
                                         <th>Số lượng</th>

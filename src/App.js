@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './components/CartProvider';
 import Menu from './components/Menu';
 import Home from './components/Home';
@@ -12,7 +12,7 @@ import OrderHistory from './components/OrderHistory';
 function App() {
     return (
         <CartProvider>
-            <BrowserRouter>
+            <HashRouter>
                 <Menu />
                 <div className="container-fluid mt-3 px-4">
                     <Routes>
@@ -25,7 +25,7 @@ function App() {
                         <Route path="/orders" element={<OrderHistory />} />
                     </Routes>
                 </div>
-            </BrowserRouter>
+            </HashRouter>
         </CartProvider>
     );
 }
