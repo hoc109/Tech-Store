@@ -17,9 +17,31 @@ function OrderHistory() {
         }
     };
 
+    const getStatusBadge = (status) => {
+        const statusConfig = {
+            pending: { class: 'bg-warning text-dark', text: 'Chờ Xác Nhận' },
+            confirmed: { class: 'bg-info text-white', text: 'Đã Xác Nhận' },
+            cancelled: { class: 'bg-danger text-white', text: 'Đã Hủy' },
+            completed: { class: 'bg-success text-white', text: 'Hoàn Thành' }
+        };
+        const config = statusConfig[status] || statusConfig.pending;
+        return <span className={`badge ${config.class}`}>{config.text}</span>;
+    };
+
+    const handleCancelOrder = async (orderId) => {
+        if (!window.confirm('Bạn có chắc muốn hủy đơn hàng này?')) return;
+        try {
+            await axios.patch(`http://localhost:9999/orders/${orderId}`, { status: 'cancelled' });
+            fetchOrders();
+            alert('Đã hủy đơn hàng thành công!');
+        } catch (error) {
+            console.error('Error cancelling order:', error);
+        }
+    };
+
     return (
         <div>
-            <h4 className="mb-3">📜 Lịch sử đơn hàng</h4>
+            <h4 className="mb-3">Lịch Sử Đơn Hàng</h4>
 
             {orders.length === 0 ? (
                 <div className="alert alert-info">Chưa có đơn hàng nào.</div>
@@ -27,20 +49,23 @@ function OrderHistory() {
                 orders.map((order) => (
                     <div key={order.id} className="card mb-4 shadow-sm">
                         <div className="card-header bg-dark text-white d-flex justify-content-between align-items-center">
-                            <span>🧾 Đơn hàng #{order.id}</span>
-                            <small>{order.date}</small>
+                            <span>Đơn hàng #{order.id}</span>
+                            <div>
+                                {getStatusBadge(order.status || 'pending')}
+                                <small className="ms-3">{order.date}</small>
+                            </div>
                         </div>
                         <div className="card-body">
                             {/* Thông tin khách hàng */}
                             <div className="row mb-3">
                                 <div className="col-md-4">
-                                    <p className="mb-1"><i className="bi bi-person-fill me-2"></i><strong>Khách hàng:</strong> {order.customerName}</p>
+                                    <p className="mb-1"><strong>Khách hàng:</strong> {order.customerName}</p>
                                 </div>
                                 <div className="col-md-4">
-                                    <p className="mb-1"><i className="bi bi-telephone-fill me-2"></i><strong>SĐT:</strong> {order.phone}</p>
+                                    <p className="mb-1"><strong>SĐT:</strong> {order.phone}</p>
                                 </div>
                                 <div className="col-md-4">
-                                    <p className="mb-1"><i className="bi bi-geo-alt-fill me-2"></i><strong>Địa chỉ:</strong> {order.address}</p>
+                                    <p className="mb-1"><strong>Địa chỉ:</strong> {order.address}</p>
                                 </div>
                             </div>
 
@@ -68,9 +93,17 @@ function OrderHistory() {
                                 </tbody>
                             </table>
 
-                            {/* Tổng tiền */}
-                            <div className="text-end">
-                                <h5>💰 Tổng cộng: <span className="text-danger">{order.totalPrice.toLocaleString()}đ</span></h5>
+                            {/* Tổng tiền và nút hành động */}
+                            <div className="d-flex justify-content-between align-items-center">
+                                <h5 className="mb-0">Tổng cộng: <span className="text-danger fw-bold">{order.totalPrice.toLocaleString()}đ</span></h5>
+                                {(order.status === 'pending' || !order.status) && (
+                                    <button
+                                        className="btn btn-sm btn-danger"
+                                        onClick={() => handleCancelOrder(order.id)}
+                                    >
+                                        Hủy Đơn Hàng
+                                    </button>
+                                )}
                             </div>
                         </div>
                     </div>

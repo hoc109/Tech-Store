@@ -44,16 +44,6 @@ function Menu() {
                             className={({ isActive }) =>
                                 'nav-link' + (isActive ? ' text-warning' : '')
                             }
-                            to="/admin"
-                        >
-                            ADMIN
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink
-                            className={({ isActive }) =>
-                                'nav-link' + (isActive ? ' text-warning' : '')
-                            }
                             to="/orders"
                         >
                             ORDERS

@@ -1,0 +1,443 @@
+/* ===== FLOATING ACTION BUTTONS ===== */
+
+.fab {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    background-color: #0d6efd;
+    color: white;
+}
+
+.fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.fab:active {
+    transform: scale(0.95);
+}
+
+/* FAB Admin - Top Right */
+.fab-admin {
+    top: 80px;
+    right: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.fab-admin:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* FAB Orders - Bottom Right (Above Cart) */
+.fab-orders {
+    bottom: 100px;
+    right: 20px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.fab-orders:hover {
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+}
+
+/* FAB Cart - Bottom Right */
+.fab-cart {
+    bottom: 30px;
+    right: 20px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    position: relative;
+}
+
+.fab-cart:hover {
+    background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+}
+
+/* Badge for Cart Count */
+.fab-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff6b6b;
+    color: white;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== ADMIN DASHBOARD STYLES ===== */
+
+.admin-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 40px 20px;
+}
+
+.admin-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admin-wrapper h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #667eea;
+}
+
+/* ===== ADMIN TAB NAVIGATION ===== */
+.admin-wrapper .btn-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.admin-wrapper .btn-group .btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #dee2e6;
+}
+
+.admin-wrapper .btn-group .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.admin-wrapper .btn-group .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.6);
+}
+
+.admin-wrapper .btn-group .btn-outline-primary {
+    color: #667eea;
+    background: white;
+}
+
+.admin-wrapper .btn-group .btn-outline-primary:hover {
+    background: #f0f2ff;
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
+/* ===== ADMIN CARDS ===== */
+.admin-wrapper .card {
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #667eea;
+}
+
+.admin-wrapper .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.admin-wrapper .card-body {
+    padding: 24px;
+}
+
+.admin-wrapper .card-header {
+    border-radius: 12px 12px 0 0;
+    font-weight: 600;
+    border: none;
+    padding: 20px 24px;
+}
+
+/* ===== STAT CARDS ===== */
+.admin-wrapper .card.shadow-sm {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+}
+
+.admin-wrapper .card.border-primary {
+    border-left-color: #667eea;
+}
+
+.admin-wrapper .card.border-success {
+    border-left-color: #28a745;
+}
+
+.admin-wrapper .card.border-info {
+    border-left-color: #17a2b8;
+}
+
+.admin-wrapper .card.border-danger {
+    border-left-color: #dc3545;
+}
+
+/* ===== FORMS ===== */
+.admin-wrapper .form-control,
+.admin-wrapper .form-select {
+    border-radius: 8px;
+    border: 1.5px solid #dee2e6;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+}
+
+.admin-wrapper .form-control:focus,
+.admin-wrapper .form-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.admin-wrapper .form-label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+/* ===== BUTTONS ===== */
+.admin-wrapper .btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    padding: 10px 20px;
+}
+
+.admin-wrapper .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.admin-wrapper .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.admin-wrapper .btn-success {
+    background: #28a745;
+}
+
+.admin-wrapper .btn-success:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+.admin-wrapper .btn-warning {
+    background: #ffc107;
+    color: #333;
+}
+
+.admin-wrapper .btn-warning:hover {
+    background: #e0a800;
+    transform: translateY(-2px);
+}
+
+.admin-wrapper .btn-danger {
+    background: #dc3545;
+}
+
+.admin-wrapper .btn-danger:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+.admin-wrapper .btn-sm {
+    padding: 6px 12px;
+    font-size: 0.875rem;
+}
+
+/* ===== TABLES ===== */
+.admin-wrapper .table {
+    margin: 0;
+    border-collapse: collapse;
+}
+
+.admin-wrapper .table thead {
+    background: #2c3e50;
+    color: white;
+}
+
+.admin-wrapper .table th {
+    font-weight: 600;
+    padding: 16px 12px;
+    border: none;
+    text-align: center;
+}
+
+.admin-wrapper .table td {
+    padding: 14px 12px;
+    border: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+.admin-wrapper .table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.admin-wrapper .table tbody tr:hover {
+    background: #f8f9ff;
+    transform: scale(1.01);
+}
+
+.admin-wrapper .table tbody tr:nth-child(even) {
+    background: #fafbff;
+}
+
+/* ===== BADGES ===== */
+.admin-wrapper .badge {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+/* ===== LIST GROUP ===== */
+.admin-wrapper .list-group-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.admin-wrapper .list-group-item:hover {
+    background: #f8f9ff;
+    border-color: #667eea;
+    transform: translateX(4px);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .fab {
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+    }
+
+    .fab-admin {
+        top: 70px;
+        right: 15px;
+    }
+
+    .fab-orders {
+        bottom: 95px;
+        right: 15px;
+    }
+
+    .fab-cart {
+        bottom: 20px;
+        right: 15px;
+    }
+
+    .fab-badge {
+        width: 24px;
+        height: 24px;
+        font-size: 10px;
+        top: -6px;
+        right: -6px;
+    }
+
+    .admin-wrapper {
+        padding: 24px 16px;
+        border-radius: 12px;
+    }
+
+    .admin-wrapper h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .admin-wrapper .btn-group {
+        gap: 8px;
+        margin-bottom: 24px;
+    }
+
+    .admin-wrapper .btn-group .btn {
+        padding: 8px 14px;
+        font-size: 0.875rem;
+    }
+
+    .admin-wrapper .card-body {
+        padding: 16px;
+    }
+
+    .admin-wrapper .table th,
+    .admin-wrapper .table td {
+        padding: 10px 8px;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .fab {
+        width: 52px;
+        height: 52px;
+        font-size: 20px;
+    }
+
+    .fab-admin {
+        top: 65px;
+        right: 12px;
+    }
+
+    .fab-orders {
+        bottom: 90px;
+        right: 12px;
+    }
+
+    .fab-cart {
+        bottom: 15px;
+        right: 12px;
+    }
+
+    .fab-badge {
+        width: 22px;
+        height: 22px;
+        font-size: 9px;
+    }
+
+    .admin-wrapper {
+        padding: 16px 12px;
+    }
+
+    .admin-wrapper h2 {
+        font-size: 1.25rem;
+    }
+
+    .admin-wrapper .btn-group {
+        flex-direction: column;
+    }
+
+    .admin-wrapper .btn-group .btn {
+        width: 100%;
+    }
+}

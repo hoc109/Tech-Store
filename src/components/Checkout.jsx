@@ -35,7 +35,8 @@ function Checkout() {
                 address: address,
                 items: cartItems,
                 totalPrice: totalPrice,
-                date: new Date().toLocaleString()
+                date: new Date().toLocaleString(),
+                status: 'pending'
             };
             await axios.post('http://localhost:9999/orders', order);
             for (const item of cartItems) {
