@@ -1,5 +1,5 @@
 import { HashRouter, Routes, Route, useNavigate } from 'react-router-dom';
-import { CartProvider, useCart } from './components/CartProvider';
+import { CartProvider } from './components/CartProvider';
 import Menu from './components/Menu';
 import Home from './components/Home';
 import ProductList from './components/ProductList';
