@@ -16,10 +16,33 @@ function Detail() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
 
+    const saveToViewedProducts = (product) => {
+        try {
+            let viewed = JSON.parse(localStorage.getItem('viewedProducts') || '[]');
+            // Remove if already exists (to move it to top)
+            viewed = viewed.filter(p => p.id !== product.id);
+            // Add to beginning
+            viewed.unshift({
+                id: product.id,
+                title: product.title,
+                price: product.price,
+                image: product.image,
+                category: product.category,
+                viewedAt: new Date().toISOString(),
+            });
+            // Keep only last 20
+            if (viewed.length > 20) viewed = viewed.slice(0, 20);
+            localStorage.setItem('viewedProducts', JSON.stringify(viewed));
+        } catch (e) {
+            console.error('Error saving viewed product:', e);
+        }
+    };
+
     const fetchProduct = async () => {
         try {
             const res = await axios.get(`http://localhost:9999/products/${id}`);
             setProduct(res.data);
+            if (res.data) saveToViewedProducts(res.data);
         } catch (error) {
             console.error('Error fetching product detail:', error);
         }
