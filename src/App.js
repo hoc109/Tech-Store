@@ -8,6 +8,8 @@ import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import Admin from './components/Admin';
 import OrderHistory from './components/OrderHistory';
+import Login from './components/Login';      // ← thêm
+import Register from './components/Register'; // ← thêm nếu có Register
 
 function App() {
     return (
@@ -23,6 +25,8 @@ function App() {
                         <Route path="/checkout" element={<Checkout />} />
                         <Route path="/admin" element={<Admin />} />
                         <Route path="/orders" element={<OrderHistory />} />
+                        <Route path="/login" element={<Login />} />      {/* ← thêm */}
+                        <Route path="/register" element={<Register />} /> {/* ← thêm nếu có */}
                     </Routes>
                 </div>
             </HashRouter>
