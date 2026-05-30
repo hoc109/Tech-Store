@@ -65,7 +65,7 @@ function Menu() {
                     </ul>
                 )}
 
-                <div className="d-flex gap-2 align-items-center">
+                <div className="d-flex gap-2 align-items-center ms-auto">
                     {!isAdmin && (
                         <Link to="/cart" className="btn btn-outline-light position-relative">
                             🛒
