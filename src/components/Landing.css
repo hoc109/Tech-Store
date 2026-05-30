@@ -1,0 +1,194 @@
+.landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+}
+
+.landing-content {
+    text-align: center;
+    width: 100%;
+}
+
+.landing-header {
+    color: white;
+    margin-bottom: 60px;
+    animation: slideDown 0.8s ease-out;
+}
+
+.landing-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+.landing-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.landing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.login-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    animation: scaleUp 0.6s ease-out;
+}
+
+.login-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.login-card h2 {
+    font-size: 1.8rem;
+    margin: 15px 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.login-card p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.card-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.user-card {
+    border-top: 5px solid #667eea;
+}
+
+.user-card .card-icon {
+    animation: bounce 2s infinite;
+}
+
+.admin-card {
+    border-top: 5px solid #ff6b6b;
+}
+
+.admin-card .card-icon {
+    animation: rotate 3s infinite linear;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.user-card button {
+    background-color: #667eea;
+}
+
+.user-card button:hover {
+    background-color: #5568d3;
+    transform: scale(1.02);
+}
+
+.admin-card button {
+    background-color: #ff6b6b;
+}
+
+.admin-card button:hover {
+    background-color: #ee5a52;
+    transform: scale(1.02);
+}
+
+.landing-footer {
+    color: white;
+    opacity: 0.8;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .landing-title {
+        font-size: 2.5rem;
+    }
+
+    .landing-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .landing-cards {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .login-card {
+        padding: 30px 20px;
+    }
+
+    .card-icon {
+        font-size: 3rem;
+    }
+}

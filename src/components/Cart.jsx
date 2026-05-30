@@ -37,7 +37,7 @@ function Cart() {
     const totalPrice = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
     return (
-        <div>
+        <div className="page-container">
             <h4 className="mb-3">🛒 Giỏ hàng</h4>
             {cartItems.length === 0 ? (
                 <div className="alert alert-info">Giỏ hàng trống. <Link to="/">Tiếp tục mua sắm</Link></div>

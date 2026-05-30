@@ -91,7 +91,7 @@ function ProductList() {
     };
 
     return (
-        <div>
+        <div className="page-container">
             <h4 className="mb-3 text-center"> List of Products </h4>
 
             <div className="row">
@@ -112,13 +112,13 @@ function ProductList() {
                         ☰
                     </button>
                     {showCategories && (
-                        <div className="mt-3">
+                        <div className="mt-3" style={{ animation: 'categoriesPanelIn 0.35s ease-out' }}>
                             <h6 className="mb-2">Danh mục sản phẩm</h6>
                             <div className="list-group">
                                 {CATEGORIES.map((cat) => (
                                     <button
                                         key={cat.key}
-                                        className={`list-group-item list-group-item-action d-flex align-items-center gap-2 ${activeCategory === cat.key ? 'active' : ''}`}
+                                        className={`category-btn list-group-item list-group-item-action d-flex align-items-center gap-2 ${activeCategory === cat.key ? 'active' : ''}`}
                                         onClick={() => handleCategoryClick(cat.key)}
                                     >
                                         <span>{cat.icon}</span> {cat.label}
@@ -130,7 +130,7 @@ function ProductList() {
                 </div>
 
                 {/* Main content */}
-                <div className={showCategories ? 'col-md-9' : 'col'}>
+                <div className={showCategories ? 'col-md-9' : 'col'} key={`content-${showCategories}`}>
                     {/* Toolbar: Search + Sort */}
                     <div className="row mb-4">
                         <div className="col-md-6">
@@ -162,9 +162,9 @@ function ProductList() {
                         {products.length === 0 && (
                             <p className="text-muted">Không tìm thấy sản phẩm nào.</p>
                         )}
-                        {products.map((product) => (
-                            <div key={product.id} className={`mb-4 ${showCategories ? 'col-md-4' : 'col-md-3'}`}>
-                                <div className="card h-100 shadow-sm">
+                        {products.map((product, index) => (
+                            <div key={product.id} className={`mb-4 stagger-item ${showCategories ? 'col-md-4' : 'col-md-3'}`}>
+                                <div className="card product-card h-100 shadow-sm">
                                     {product.image && product.image.trim() !== '' && !product.image.includes('placehold.co') ? (
                                         <img src={product.image} className="card-img-top" alt={product.title} style={{ height: '200px', objectFit: 'cover' }} />
                                     ) : (
@@ -188,7 +188,7 @@ function ProductList() {
                                                 Xem chi tiết
                                             </Link>
                                             <button
-                                                className="btn btn-success btn-sm"
+                                                className="btn btn-success btn-sm btn-add-cart"
                                                 onClick={() => handleAddToCart(product)}
                                             >
                                                 Thêm vào giỏ hàng

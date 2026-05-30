@@ -18,9 +18,13 @@ function Detail() {
 
     const saveToViewedProducts = (product) => {
         try {
+            if (!product || !product.id) return;
+            
             let viewed = JSON.parse(localStorage.getItem('viewedProducts') || '[]');
+            
             // Remove if already exists (to move it to top)
             viewed = viewed.filter(p => p.id !== product.id);
+            
             // Add to beginning
             viewed.unshift({
                 id: product.id,
@@ -30,9 +34,14 @@ function Detail() {
                 category: product.category,
                 viewedAt: new Date().toISOString(),
             });
+            
             // Keep only last 20
             if (viewed.length > 20) viewed = viewed.slice(0, 20);
+            
             localStorage.setItem('viewedProducts', JSON.stringify(viewed));
+            
+            // Dispatch event so ViewedProducts component can update
+            window.dispatchEvent(new Event('productViewed'));
         } catch (e) {
             console.error('Error saving viewed product:', e);
         }

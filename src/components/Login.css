@@ -1,0 +1,134 @@
+.login-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-form-wrapper {
+    width: 100%;
+    max-width: 500px;
+}
+
+.login-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    animation: slideIn 0.5s ease-out;
+}
+
+.login-card .card-header {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-card .card-header h2 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.login-card .card-body {
+    background-color: #fff;
+}
+
+.login-card .form-control {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    padding: 12px 15px;
+}
+
+.login-card .form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.login-card .form-label {
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.login-card .btn {
+    padding: 12px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.login-card .btn-primary {
+    background-color: #667eea;
+    border: none;
+}
+
+.login-card .btn-primary:hover:not(:disabled) {
+    background-color: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.login-card .btn-danger {
+    background-color: #ff6b6b;
+    border: none;
+}
+
+.login-card .btn-danger:hover:not(:disabled) {
+    background-color: #ee5a52;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.login-card .btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.login-card .btn-link {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.login-card .btn-link:hover {
+    color: #5568d3;
+    text-decoration: underline;
+}
+
+.login-card .alert {
+    border-radius: 8px;
+    background-color: #e7f3ff;
+    border: 1px solid #b3d9ff;
+    color: #0066cc;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        padding: 15px;
+    }
+
+    .login-form-wrapper {
+        max-width: 100%;
+    }
+
+    .login-card .card-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .login-card .card-body {
+        padding: 2rem 1.5rem !important;
+    }
+
+    .login-card .form-control {
+        font-size: 16px;
+    }
+}

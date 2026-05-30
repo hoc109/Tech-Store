@@ -385,7 +385,7 @@ function Home() {
     };
 
     return (
-        <div>
+        <div className="page-container">
             <style>
                 {`
                     @keyframes fadeIn {

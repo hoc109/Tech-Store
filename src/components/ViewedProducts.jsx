@@ -9,6 +9,13 @@ function ViewedProducts() {
 
     useEffect(() => {
         loadViewedProducts();
+        
+        // Listen for product viewed event
+        window.addEventListener('productViewed', loadViewedProducts);
+        
+        return () => {
+            window.removeEventListener('productViewed', loadViewedProducts);
+        };
     }, []);
 
     const loadViewedProducts = () => {
@@ -64,7 +71,7 @@ function ViewedProducts() {
     };
 
     return (
-        <div>
+        <div className="page-container">
             {/* Header */}
             <div className="d-flex justify-content-between align-items-center mb-4">
                 <div>
@@ -116,8 +123,8 @@ function ViewedProducts() {
 
             {/* Products grid */}
             <div className="row">
-                {viewedProducts.map((product) => (
-                    <div key={product.id} className="col-md-3 mb-4">
+                {viewedProducts.map((product, index) => (
+                    <div key={product.id} className="col-md-3 mb-4 stagger-item">
                         <div
                             className="card h-100 shadow-sm border-0"
                             style={{

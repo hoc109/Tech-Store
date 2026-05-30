@@ -109,6 +109,253 @@
     }
 }
 
+/* ===== PAGE TRANSITION ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== CATEGORY BUTTON ANIMATIONS ===== */
+.category-btn {
+    animation: slideInLeft 0.3s ease-out;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.category-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.category-btn:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+.category-btn.active {
+    animation: pulse 0.6s ease-in-out;
+}
+
+/* ===== PRODUCT CARD ANIMATIONS ===== */
+.product-card {
+    animation: fadeIn 0.4s ease-out;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Card image hover animation */
+.product-card .card-img-top {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.product-card:hover .card-img-top {
+    transform: scale(1.08);
+    filter: brightness(0.95);
+}
+
+/* ===== PRODUCT GRID LAYOUT TRANSITION ===== */
+.row {
+    transition: all 0.4s ease-out;
+}
+
+[class*="col-"] {
+    transition: flex 0.4s ease-out, max-width 0.4s ease-out, width 0.4s ease-out !important;
+}
+
+/* Main content container smooth resize */
+.col-md-9,
+.col {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+/* Sidebar animation */
+.col-md-3 {
+    animation: slideInLeft 0.4s ease-out;
+    transition: all 0.4s ease-out !important;
+}
+
+/* Categories list animation */
+.list-group {
+    animation: slideInLeft 0.35s ease-out;
+}
+
+.list-group-item {
+    transition: all 0.3s ease;
+}
+
+/* Product grid items resize animation */
+.col-md-4,
+.col-md-3 {
+    animation: gridItemFadeIn 0.3s ease-out;
+    transition: all 0.4s ease-out !important;
+}
+
+/* Product items re-layout animation when categories toggle */
+.stagger-item {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ===== BUTTON ANIMATIONS ===== */
+.btn-add-cart {
+    animation: slideInUp 0.3s ease-out;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.btn-add-cart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-add-cart:active {
+    transform: translateY(0);
+}
+
+/* Product detail and add-to-cart button animations */
+.product-card .btn {
+    animation: slideInUp 0.4s ease-out;
+    animation-delay: 0.1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    transition: all 0.3s ease;
+}
+
+.product-card .btn:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.product-card .btn:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.product-card .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== PULSE ANIMATION ===== */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+    }
+}
+
+/* ===== BOUNCE ANIMATION ===== */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* ===== STAGGER ANIMATION FOR LIST ITEMS ===== */
+.stagger-item {
+    animation: slideInUp 0.5s ease-out;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.05s; }
+.stagger-item:nth-child(2) { animation-delay: 0.1s; }
+.stagger-item:nth-child(3) { animation-delay: 0.15s; }
+.stagger-item:nth-child(4) { animation-delay: 0.2s; }
+.stagger-item:nth-child(5) { animation-delay: 0.25s; }
+.stagger-item:nth-child(n+6) { animation-delay: 0.3s; }
+
+/* Alternate slide directions for visual interest */
+.stagger-item:nth-child(odd) {
+    animation: slideInLeft 0.5s ease-out;
+}
+
+.stagger-item:nth-child(even) {
+    animation: slideInRight 0.5s ease-out;
+}
+
+.stagger-item:nth-child(4n+1) {
+    animation: slideInUp 0.5s ease-out;
+}
+
+.stagger-item:nth-child(4n+3) {
+    animation: slideInRight 0.5s ease-out;
+}
+
+/* Product list item smooth entry */
+.stagger-item {
+    transform-origin: center;
+}
+
+.stagger-item:nth-child(-2n+3) {
+    animation-delay: calc(var(--item-index, 0) * 0.08s);
+}
+
+/* ===== SMOOTH PAGE CONTAINER ===== */
+.page-container {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* ===== NAV ANIMATION ===== */
+.navbar {
+    animation: slideInDown 0.4s ease-out;
+}
+
 .admin-wrapper h2 {
     text-align: center;
     color: #2c3e50;
@@ -394,6 +641,130 @@
     .admin-wrapper .table td {
         padding: 10px 8px;
         font-size: 0.875rem;
+    }
+}
+
+/* ===== HAMBURGER MENU ANIMATIONS ===== */
+@keyframes expandMenu {
+    from {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+    to {
+        opacity: 1;
+        max-height: 500px;
+        overflow: visible;
+    }
+}
+
+/* Smooth navbar collapse animation */
+.navbar-collapse {
+    animation: expandMenu 0.4s ease-out forwards !important;
+}
+
+.navbar-collapse.collapse:not(.show) {
+    animation: none;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.navbar-toggler {
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:not(.collapsed) {
+    transform: scale(1.1);
+}
+
+/* ===== CONTENT CONTAINER ANIMATIONS ===== */
+@keyframes contentSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container-fluid {
+    animation: contentSlideIn 0.4s ease-out;
+}
+
+/* ===== PRODUCT GRID SMOOTH ANIMATION ===== */
+@keyframes gridItemFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.row.row-cols-1 {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.row.row-cols-1 > div {
+    animation: gridItemFadeIn 0.4s ease-out;
+}
+
+.row.row-cols-1 > div:nth-child(1) { animation-delay: 0.05s; }
+.row.row-cols-1 > div:nth-child(2) { animation-delay: 0.1s; }
+.row.row-cols-1 > div:nth-child(3) { animation-delay: 0.15s; }
+.row.row-cols-1 > div:nth-child(4) { animation-delay: 0.2s; }
+.row.row-cols-1 > div:nth-child(5) { animation-delay: 0.25s; }
+.row.row-cols-1 > div:nth-child(6) { animation-delay: 0.3s; }
+.row.row-cols-1 > div:nth-child(n+7) { animation-delay: 0.3s; }
+
+/* Product grid container */
+.row:has(.stagger-item) {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* ===== SMOOTH TRANSITIONS ===== */
+* {
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+button, a, input {
+    transition: all 0.2s ease;
+}
+
+/* ===== LOADING STATE ===== */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* ===== CATEGORIES SIDEBAR TOGGLE ANIMATION ===== */
+@keyframes categoriesPanelIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes categoriesPanelOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-30px);
     }
 }
 
