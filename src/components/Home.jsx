@@ -425,9 +425,9 @@ function Home() {
                                             transition: 'all 0.2s ease',
                                         }}
                                     >
-                                        {info.route && (
+                                        {info.route && info.key === 'exclusive' && (
                                             <span style={{ fontSize: '0.75rem' }}>
-                                                {info.key === 'exclusive' ? '🏪' : '👁️'}
+                                                🏪
                                             </span>
                                         )}
                                         <span style={{ fontSize: '0.9rem' }}>{info.label}</span>
@@ -473,7 +473,7 @@ function Home() {
                                         🎉 SIÊU SALE THÁNG 6
                                     </h2>
                                     <p style={{ fontSize: '1.1rem', opacity: 0.9, marginBottom: '20px' }}>
-                                        Giảm giá lên đến 50% cho tất cả sản phẩm Laptop, PC Gaming và phụ kiện công nghệ
+                                        Giảm giá lên đến 30% cho tất cả sản phẩm Laptop, PC Gaming và phụ kiện công nghệ
                                     </p>
                                     <Link
                                         to="/products"
@@ -609,7 +609,7 @@ function Home() {
                                                             className="btn btn-primary btn-sm flex-fill"
                                                             style={{ borderRadius: '8px', fontSize: '0.8rem' }}
                                                         >
-                                                            👁️ Xem chi tiết
+                                                            Xem chi tiết
                                                         </Link>
                                                         <button
                                                             className="btn btn-success btn-sm"
